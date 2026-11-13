@@ -1,0 +1,75 @@
+{
+  "id": "gwByTag000000001",
+  "name": "Get workflows by tag",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Get workflows by tag\nGive the workflows you want the tag **selected-workflows** (and no other workflow). The node returns one item per tagged workflow.\n\nTo change the tag: open the node, Filters > Tags.\nSelect your own **n8n API** credential in the node.",
+        "width": 520,
+        "height": 220
+      },
+      "id": "gw-node-0003",
+      "name": "Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        -260
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "gw-node-0001",
+      "name": "When clicking \"Execute workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "selected-workflows"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0002",
+      "name": "Get workflows with the tag",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        0
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "When clicking \"Execute workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Get workflows with the tag",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "active": false
+}

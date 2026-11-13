@@ -1,0 +1,2584 @@
+{
+  "id": "gwLab00000000001",
+  "name": "Lab: Get many workflows, one branch per case",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/all",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0008",
+      "name": "run all",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "gw-lab-all"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {},
+        "requestOptions": {}
+      },
+      "id": "gw-node-0009",
+      "name": "get all",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        0
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/all",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0010",
+      "name": "sent all",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        0
+      ],
+      "webhookId": "gw-sent-all"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {},
+        "requestOptions": {}
+      },
+      "id": "gw-node-0011",
+      "name": "echo all",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        0
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/name-one",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0012",
+      "name": "run name-one",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        180
+      ],
+      "webhookId": "gw-lab-name-one"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "Workflow 1"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0013",
+      "name": "get name-one",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        180
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/name-one",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0014",
+      "name": "sent name-one",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        180
+      ],
+      "webhookId": "gw-sent-name-one"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "Workflow 1"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0015",
+      "name": "echo name-one",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        180
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/name-two-comma",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0016",
+      "name": "run name-two-comma",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        360
+      ],
+      "webhookId": "gw-lab-name-two-comma"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "Part Time Job Tracker, Workflow 1"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0017",
+      "name": "get name-two-comma",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        360
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/name-two-comma",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0018",
+      "name": "sent name-two-comma",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        360
+      ],
+      "webhookId": "gw-sent-name-two-comma"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "Part Time Job Tracker, Workflow 1"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0019",
+      "name": "echo name-two-comma",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        360
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/name-two-comma-no-space",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0020",
+      "name": "run name-two-comma-no-space",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        540
+      ],
+      "webhookId": "gw-lab-name-two-comma-no-space"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "Part Time Job Tracker,Workflow 1"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0021",
+      "name": "get name-two-comma-no-space",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        540
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/name-two-comma-no-space",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0022",
+      "name": "sent name-two-comma-no-space",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        540
+      ],
+      "webhookId": "gw-sent-name-two-comma-no-space"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "Part Time Job Tracker,Workflow 1"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0023",
+      "name": "echo name-two-comma-no-space",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        540
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/name-with-own-comma",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0024",
+      "name": "run name-with-own-comma",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        720
+      ],
+      "webhookId": "gw-lab-name-with-own-comma"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "Reports, weekly"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0025",
+      "name": "get name-with-own-comma",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        720
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/name-with-own-comma",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0026",
+      "name": "sent name-with-own-comma",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        720
+      ],
+      "webhookId": "gw-sent-name-with-own-comma"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "Reports, weekly"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0027",
+      "name": "echo name-with-own-comma",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        720
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/name-partial",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0028",
+      "name": "run name-partial",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        900
+      ],
+      "webhookId": "gw-lab-name-partial"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "Tracker"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0029",
+      "name": "get name-partial",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        900
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/name-partial",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0030",
+      "name": "sent name-partial",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        900
+      ],
+      "webhookId": "gw-sent-name-partial"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "Tracker"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0031",
+      "name": "echo name-partial",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        900
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/name-partial-middle",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0032",
+      "name": "run name-partial-middle",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        1080
+      ],
+      "webhookId": "gw-lab-name-partial-middle"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "orkflow 1"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0033",
+      "name": "get name-partial-middle",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        1080
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/name-partial-middle",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0034",
+      "name": "sent name-partial-middle",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        1080
+      ],
+      "webhookId": "gw-sent-name-partial-middle"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "orkflow 1"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0035",
+      "name": "echo name-partial-middle",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1080
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/name-other-case",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0036",
+      "name": "run name-other-case",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        1260
+      ],
+      "webhookId": "gw-lab-name-other-case"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "PART TIME JOB TRACKER"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0037",
+      "name": "get name-other-case",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        1260
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/name-other-case",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0038",
+      "name": "sent name-other-case",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        1260
+      ],
+      "webhookId": "gw-sent-name-other-case"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "PART TIME JOB TRACKER"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0039",
+      "name": "echo name-other-case",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1260
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/name-padded",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0040",
+      "name": "run name-padded",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        1440
+      ],
+      "webhookId": "gw-lab-name-padded"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": " Workflow 1 "
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0041",
+      "name": "get name-padded",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        1440
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/name-padded",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0042",
+      "name": "sent name-padded",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        1440
+      ],
+      "webhookId": "gw-sent-name-padded"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": " Workflow 1 "
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0043",
+      "name": "echo name-padded",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1440
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/name-unknown",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0044",
+      "name": "run name-unknown",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        1620
+      ],
+      "webhookId": "gw-lab-name-unknown"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "No Such Workflow"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0045",
+      "name": "get name-unknown",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        1620
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/name-unknown",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0046",
+      "name": "sent name-unknown",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        1620
+      ],
+      "webhookId": "gw-sent-name-unknown"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "name": "No Such Workflow"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0047",
+      "name": "echo name-unknown",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1620
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/tag-one",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0048",
+      "name": "run tag-one",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        1800
+      ],
+      "webhookId": "gw-lab-tag-one"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "selected-workflows"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0049",
+      "name": "get tag-one",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        1800
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/tag-one",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0050",
+      "name": "sent tag-one",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        1800
+      ],
+      "webhookId": "gw-sent-tag-one"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "selected-workflows"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0051",
+      "name": "echo tag-one",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1800
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/tag-two",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0052",
+      "name": "run tag-two",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        1980
+      ],
+      "webhookId": "gw-lab-tag-two"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "selected-workflows,jobs"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0053",
+      "name": "get tag-two",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        1980
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/tag-two",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0054",
+      "name": "sent tag-two",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        1980
+      ],
+      "webhookId": "gw-sent-tag-two"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "selected-workflows,jobs"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0055",
+      "name": "echo tag-two",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1980
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/tag-two-spaced",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0056",
+      "name": "run tag-two-spaced",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        2160
+      ],
+      "webhookId": "gw-lab-tag-two-spaced"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "selected-workflows, jobs"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0057",
+      "name": "get tag-two-spaced",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        2160
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/tag-two-spaced",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0058",
+      "name": "sent tag-two-spaced",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        2160
+      ],
+      "webhookId": "gw-sent-tag-two-spaced"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "selected-workflows, jobs"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0059",
+      "name": "echo tag-two-spaced",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        2160
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/tag-other-case",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0060",
+      "name": "run tag-other-case",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        2340
+      ],
+      "webhookId": "gw-lab-tag-other-case"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "Selected-Workflows"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0061",
+      "name": "get tag-other-case",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        2340
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/tag-other-case",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0062",
+      "name": "sent tag-other-case",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        2340
+      ],
+      "webhookId": "gw-sent-tag-other-case"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "Selected-Workflows"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0063",
+      "name": "echo tag-other-case",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        2340
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/tag-partial",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0064",
+      "name": "run tag-partial",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        2520
+      ],
+      "webhookId": "gw-lab-tag-partial"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "selected"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0065",
+      "name": "get tag-partial",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        2520
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/tag-partial",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0066",
+      "name": "sent tag-partial",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        2520
+      ],
+      "webhookId": "gw-sent-tag-partial"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "selected"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0067",
+      "name": "echo tag-partial",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        2520
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/tag-unknown",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0068",
+      "name": "run tag-unknown",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        2700
+      ],
+      "webhookId": "gw-lab-tag-unknown"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "no-such-tag"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0069",
+      "name": "get tag-unknown",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        2700
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/tag-unknown",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0070",
+      "name": "sent tag-unknown",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        2700
+      ],
+      "webhookId": "gw-sent-tag-unknown"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "no-such-tag"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0071",
+      "name": "echo tag-unknown",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        2700
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/tag-jobs",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0072",
+      "name": "run tag-jobs",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        2880
+      ],
+      "webhookId": "gw-lab-tag-jobs"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "jobs"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0073",
+      "name": "get tag-jobs",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        2880
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/tag-jobs",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0074",
+      "name": "sent tag-jobs",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        2880
+      ],
+      "webhookId": "gw-sent-tag-jobs"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "jobs"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0075",
+      "name": "echo tag-jobs",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        2880
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/tag-jobs-published",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0076",
+      "name": "run tag-jobs-published",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        3060
+      ],
+      "webhookId": "gw-lab-tag-jobs-published"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "jobs",
+          "activeWorkflows": true
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0077",
+      "name": "get tag-jobs-published",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        3060
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/tag-jobs-published",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0078",
+      "name": "sent tag-jobs-published",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        3060
+      ],
+      "webhookId": "gw-sent-tag-jobs-published"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "jobs",
+          "activeWorkflows": true
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0079",
+      "name": "echo tag-jobs-published",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        3060
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/tag-and-name",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0080",
+      "name": "run tag-and-name",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        3240
+      ],
+      "webhookId": "gw-lab-tag-and-name"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "selected-workflows",
+          "name": "Workflow 1"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0081",
+      "name": "get tag-and-name",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        3240
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/tag-and-name",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0082",
+      "name": "sent tag-and-name",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        3240
+      ],
+      "webhookId": "gw-sent-tag-and-name"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "tags": "selected-workflows",
+          "name": "Workflow 1"
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0083",
+      "name": "echo tag-and-name",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        3240
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/published-only",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0084",
+      "name": "run published-only",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        3420
+      ],
+      "webhookId": "gw-lab-published-only"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "activeWorkflows": true
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0085",
+      "name": "get published-only",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        3420
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/published-only",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0086",
+      "name": "sent published-only",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        3420
+      ],
+      "webhookId": "gw-sent-published-only"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "activeWorkflows": true
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0087",
+      "name": "echo published-only",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        3420
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/published-switch-off",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0088",
+      "name": "run published-switch-off",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        3600
+      ],
+      "webhookId": "gw-lab-published-switch-off"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "activeWorkflows": false
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0089",
+      "name": "get published-switch-off",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        3600
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/published-switch-off",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0090",
+      "name": "sent published-switch-off",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        3600
+      ],
+      "webhookId": "gw-sent-published-switch-off"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "activeWorkflows": false
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0091",
+      "name": "echo published-switch-off",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        3600
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/limit-2",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0092",
+      "name": "run limit-2",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        3780
+      ],
+      "webhookId": "gw-lab-limit-2"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 2,
+        "filters": {},
+        "requestOptions": {}
+      },
+      "id": "gw-node-0093",
+      "name": "get limit-2",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        3780
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/limit-2",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0094",
+      "name": "sent limit-2",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        3780
+      ],
+      "webhookId": "gw-sent-limit-2"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 2,
+        "filters": {},
+        "requestOptions": {}
+      },
+      "id": "gw-node-0095",
+      "name": "echo limit-2",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        3780
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lab/exclude-pinned",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0096",
+      "name": "run exclude-pinned",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        3960
+      ],
+      "webhookId": "gw-lab-exclude-pinned"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "excludePinnedData": true
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0097",
+      "name": "get exclude-pinned",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        3960
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwN8nApiKey00001",
+          "name": "n8n account"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "sent/exclude-pinned",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "gw-node-0098",
+      "name": "sent exclude-pinned",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        3960
+      ],
+      "webhookId": "gw-sent-exclude-pinned"
+    },
+    {
+      "parameters": {
+        "resource": "workflow",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "excludePinnedData": true
+        },
+        "requestOptions": {}
+      },
+      "id": "gw-node-0099",
+      "name": "echo exclude-pinned",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        740,
+        3960
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "gwLabEcho0000001",
+          "name": "Lab echo"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "echo/api/v1/workflows",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "gw-node-0100",
+      "name": "Echo: GET workflows",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        -360
+      ],
+      "webhookId": "gw-echo-workflows"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ data: [{ sent: $json.query }], nextCursor: null }) }}",
+        "options": {}
+      },
+      "id": "gw-node-0101",
+      "name": "Echo: answer",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        220,
+        -360
+      ]
+    }
+  ],
+  "connections": {
+    "run all": {
+      "main": [
+        [
+          {
+            "node": "get all",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent all": {
+      "main": [
+        [
+          {
+            "node": "echo all",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run name-one": {
+      "main": [
+        [
+          {
+            "node": "get name-one",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent name-one": {
+      "main": [
+        [
+          {
+            "node": "echo name-one",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run name-two-comma": {
+      "main": [
+        [
+          {
+            "node": "get name-two-comma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent name-two-comma": {
+      "main": [
+        [
+          {
+            "node": "echo name-two-comma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run name-two-comma-no-space": {
+      "main": [
+        [
+          {
+            "node": "get name-two-comma-no-space",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent name-two-comma-no-space": {
+      "main": [
+        [
+          {
+            "node": "echo name-two-comma-no-space",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run name-with-own-comma": {
+      "main": [
+        [
+          {
+            "node": "get name-with-own-comma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent name-with-own-comma": {
+      "main": [
+        [
+          {
+            "node": "echo name-with-own-comma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run name-partial": {
+      "main": [
+        [
+          {
+            "node": "get name-partial",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent name-partial": {
+      "main": [
+        [
+          {
+            "node": "echo name-partial",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run name-partial-middle": {
+      "main": [
+        [
+          {
+            "node": "get name-partial-middle",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent name-partial-middle": {
+      "main": [
+        [
+          {
+            "node": "echo name-partial-middle",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run name-other-case": {
+      "main": [
+        [
+          {
+            "node": "get name-other-case",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent name-other-case": {
+      "main": [
+        [
+          {
+            "node": "echo name-other-case",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run name-padded": {
+      "main": [
+        [
+          {
+            "node": "get name-padded",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent name-padded": {
+      "main": [
+        [
+          {
+            "node": "echo name-padded",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run name-unknown": {
+      "main": [
+        [
+          {
+            "node": "get name-unknown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent name-unknown": {
+      "main": [
+        [
+          {
+            "node": "echo name-unknown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run tag-one": {
+      "main": [
+        [
+          {
+            "node": "get tag-one",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent tag-one": {
+      "main": [
+        [
+          {
+            "node": "echo tag-one",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run tag-two": {
+      "main": [
+        [
+          {
+            "node": "get tag-two",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent tag-two": {
+      "main": [
+        [
+          {
+            "node": "echo tag-two",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run tag-two-spaced": {
+      "main": [
+        [
+          {
+            "node": "get tag-two-spaced",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent tag-two-spaced": {
+      "main": [
+        [
+          {
+            "node": "echo tag-two-spaced",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run tag-other-case": {
+      "main": [
+        [
+          {
+            "node": "get tag-other-case",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent tag-other-case": {
+      "main": [
+        [
+          {
+            "node": "echo tag-other-case",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run tag-partial": {
+      "main": [
+        [
+          {
+            "node": "get tag-partial",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent tag-partial": {
+      "main": [
+        [
+          {
+            "node": "echo tag-partial",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run tag-unknown": {
+      "main": [
+        [
+          {
+            "node": "get tag-unknown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent tag-unknown": {
+      "main": [
+        [
+          {
+            "node": "echo tag-unknown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run tag-jobs": {
+      "main": [
+        [
+          {
+            "node": "get tag-jobs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent tag-jobs": {
+      "main": [
+        [
+          {
+            "node": "echo tag-jobs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run tag-jobs-published": {
+      "main": [
+        [
+          {
+            "node": "get tag-jobs-published",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent tag-jobs-published": {
+      "main": [
+        [
+          {
+            "node": "echo tag-jobs-published",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run tag-and-name": {
+      "main": [
+        [
+          {
+            "node": "get tag-and-name",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent tag-and-name": {
+      "main": [
+        [
+          {
+            "node": "echo tag-and-name",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run published-only": {
+      "main": [
+        [
+          {
+            "node": "get published-only",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent published-only": {
+      "main": [
+        [
+          {
+            "node": "echo published-only",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run published-switch-off": {
+      "main": [
+        [
+          {
+            "node": "get published-switch-off",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent published-switch-off": {
+      "main": [
+        [
+          {
+            "node": "echo published-switch-off",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run limit-2": {
+      "main": [
+        [
+          {
+            "node": "get limit-2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent limit-2": {
+      "main": [
+        [
+          {
+            "node": "echo limit-2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "run exclude-pinned": {
+      "main": [
+        [
+          {
+            "node": "get exclude-pinned",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sent exclude-pinned": {
+      "main": [
+        [
+          {
+            "node": "echo exclude-pinned",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Echo: GET workflows": {
+      "main": [
+        [
+          {
+            "node": "Echo: answer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "active": false
+}

@@ -1,0 +1,14 @@
+{
+  "name": "n8n-get-workflows-by-name",
+  "version": "1.0.0",
+  "private": true,
+  "description": "What the filters of the n8n node's \"Get many workflows\" really do on n8n 2.47.7, and two small workflows that return exactly the workflows you name",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test:e2e": "node scripts/e2e.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
